@@ -106,19 +106,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -137,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96416491b3675894dbfdd761eb4223b0
-      internalID: 291793809
+      spriteID: f84f74866709d604caec7b5f9c3a0060
+      internalID: 1654442032
       vertices: []
       indices: 
       edges: []
@@ -158,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 194f7cc36b1c64549aac07bd570f51ba
-      internalID: -2129700613
+      spriteID: cb7101e3be460464395408406b034033
+      internalID: -1647951170
       vertices: []
       indices: 
       edges: []
@@ -179,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9311079782ee0a548b5858e647edb20c
-      internalID: 296445289
+      spriteID: 02355a15efb2ce9489f126b7ba66e527
+      internalID: -599152019
       vertices: []
       indices: 
       edges: []
@@ -200,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de1fabdac1cb2fa48b8db29f7eadbe89
-      internalID: 1696363506
+      spriteID: 1e08a9296325138468538b74a4181c90
+      internalID: -1323486321
       vertices: []
       indices: 
       edges: []
@@ -221,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db159ebdd6e4e024bafeb53634f14325
-      internalID: 1003685312
+      spriteID: 511b1549d8a338b42befe40828a69823
+      internalID: 1342454468
       vertices: []
       indices: 
       edges: []
@@ -242,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 540941b871a61cc43ae89ecd6121c5c6
-      internalID: 400732175
+      spriteID: 10adbe3ea20ab9940a43bfddae8b099c
+      internalID: -799838475
       vertices: []
       indices: 
       edges: []
@@ -263,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3043700f674fa2d419a355071d63b45d
-      internalID: -148623923
+      spriteID: f4d4ebd82b7e7f74ea43d2ed1b60505f
+      internalID: 1978714374
       vertices: []
       indices: 
       edges: []
@@ -284,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef47694f8c9f72e45bd866d2a434b729
-      internalID: -1616138931
+      spriteID: 8cbe79b977d2cd2489f80d7e113cf69b
+      internalID: -1513529890
       vertices: []
       indices: 
       edges: []
@@ -305,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7d942766a21e5549bb48c43df5a63cd
-      internalID: -283127883
+      spriteID: 644c64d1fccdb344f9340c4bbb8871bf
+      internalID: 1669176977
       vertices: []
       indices: 
       edges: []
@@ -322,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FloorWaterRoundCorners_0: 291793809
-      FloorWaterRoundCorners_1: -2129700613
-      FloorWaterRoundCorners_2: 296445289
-      FloorWaterRoundCorners_3: 1696363506
-      FloorWaterRoundCorners_4: 1003685312
-      FloorWaterRoundCorners_5: 400732175
-      FloorWaterRoundCorners_6: -148623923
-      FloorWaterRoundCorners_7: -1616138931
-      FloorWaterRoundCorners_8: -283127883
+      FloorWaterRoundCorners_0: 1654442032
+      FloorWaterRoundCorners_1: -1647951170
+      FloorWaterRoundCorners_2: -599152019
+      FloorWaterRoundCorners_3: -1323486321
+      FloorWaterRoundCorners_4: 1342454468
+      FloorWaterRoundCorners_5: -799838475
+      FloorWaterRoundCorners_6: 1978714374
+      FloorWaterRoundCorners_7: -1513529890
+      FloorWaterRoundCorners_8: 1669176977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
