@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class UIHandler : MonoBehaviour
 {
+
+
     public static UIHandler instance { get; private set; }
     private VisualElement m_Healthbar;
 

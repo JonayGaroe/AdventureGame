@@ -5,6 +5,8 @@ using UnityEngine;
 public class Saludable : MonoBehaviour
 {
     // Start is called before the first frame update
+    //audio
+    public AudioClip collectedClip;
 
 
 
@@ -17,6 +19,7 @@ public class Saludable : MonoBehaviour
         {
             controller.ChangeHealth(1);
             Destroy(gameObject);
+           // controller.PlaySound(collectedClip);
         }
     }
 

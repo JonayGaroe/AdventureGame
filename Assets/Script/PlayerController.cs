@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,7 +8,8 @@ public class PlayerController : MonoBehaviour
 {
 
 
-
+    //audios
+    AudioSource audioSource;
     // proyectil
 
     public GameObject projectilePrefab;
@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         MoveAction.Enable();
         rigidbody2d = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
@@ -69,7 +70,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Look X", moveDirection.x);
         animator.SetFloat("Look Y", moveDirection.y);
         animator.SetFloat("Speed", move.magnitude);
-
+        
 
         if (isInvincible)
         {
@@ -143,6 +144,18 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+
+    public void PlaySound(AudioClip clip)
+    {
+
+        audioSource.PlayOneShot(clip);
+
+    }
+
+
+
+
 
 
 }

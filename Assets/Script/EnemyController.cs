@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
+using UnityEngine.InputSystem;
 
 public class EnemyController : MonoBehaviour
 {
@@ -20,7 +19,7 @@ public class EnemyController : MonoBehaviour
     public float speed;
     public bool vertical;
     public float changeTime = 3.0f;
-
+    //public ParticleSystem smokeEffect;
     // Private variables
     Rigidbody2D rigidbody2d;
     float timer;
@@ -33,7 +32,6 @@ public class EnemyController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         timer = changeTime;
-
     }
 
 
@@ -50,7 +48,6 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-
     // FixedUpdate has the same call rate as the physics system
     void FixedUpdate()
     {
@@ -60,7 +57,6 @@ public class EnemyController : MonoBehaviour
         }
 
         Vector2 position = rigidbody2d.position;
-
         if (vertical)
         {
             position.y = position.y + speed * direction * Time.deltaTime;
@@ -73,8 +69,6 @@ public class EnemyController : MonoBehaviour
             animator.SetFloat("Move X", direction);
             animator.SetFloat("Move Y", 0);
         }
-
-
         rigidbody2d.MovePosition(position);
     }
 
@@ -91,18 +85,12 @@ public class EnemyController : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
-    }
-
-
-
     public void Fix()
     {
         broken = false;
-        GetComponent<Rigidbody2D>().simulated = false;
+        rigidbody2d.simulated = false;
         animator.SetTrigger("Fixed");
+       // smokeEffect.Stop();
     }
 
 
@@ -111,4 +99,10 @@ public class EnemyController : MonoBehaviour
 
 
 
+//para que se pare la musica
+//   AudioSource audioSource = GetComponent<AudioSource>();
 
+//if (audioSource != null && audioSource.isPlaying)
+//  {
+//   audioSource.Stop();
+// }
