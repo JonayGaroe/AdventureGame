@@ -35,19 +35,22 @@ public class PlayerController : MonoBehaviour
     {
         MoveAction.Enable();
         rigidbody2d = GetComponent<Rigidbody2D>();
+
+
         currentHealth = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+        move = MoveAction.ReadValue<Vector2>();
+
+
         if (isInvincible)
         {
             damageCooldown -= Time.deltaTime;
             if (damageCooldown < 0)
-            {
                 isInvincible = false;
-            }
         }
 
         move = MoveAction.ReadValue<Vector2>();
@@ -75,7 +78,7 @@ public class PlayerController : MonoBehaviour
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
     }
 
 }
