@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
     public float speed;
     public bool vertical;
     public float changeTime = 3.0f;
-    //public ParticleSystem smokeEffect;
+    public ParticleSystem smokeEffect;
     // Private variables
     Rigidbody2D rigidbody2d;
     float timer;
@@ -90,12 +90,19 @@ public class EnemyController : MonoBehaviour
         broken = false;
         rigidbody2d.simulated = false;
         animator.SetTrigger("Fixed");
-       // smokeEffect.Stop();
+
+        if (smokeEffect != null)
+        {
+            smokeEffect.Stop();
+        }
+        else
+        {
+            Debug.LogWarning("SmokeEffect no está asignado en el EnemyController.");
+        }
+
     }
 
-
 }
-
 
 
 
