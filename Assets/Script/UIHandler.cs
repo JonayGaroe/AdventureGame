@@ -8,21 +8,45 @@ public class UIHandler : MonoBehaviour
     public static UIHandler instance { get; private set; }
     private VisualElement m_Healthbar;
 
-
+    //dialogo
+    public float displayTime = 4.0f;
+    private VisualElement m_NonPlayerDialogue;
+    private float m_TimerDisplay;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+        UIDocument uiDocument = GetComponent<UIDocument>();
+        m_Healthbar = uiDocument.rootVisualElement.Q<VisualElement>("HealthBar");
+        SetHealthValue(1.0f);
+
+
+        m_NonPlayerDialogue = uiDocument.rootVisualElement.Q<VisualElement>("NPCDialogue");
+        m_NonPlayerDialogue.style.display = DisplayStyle.None;
+        m_TimerDisplay = -1.0f;
 
 
     }
 
 
-    void Start()
+
+    private void Update()
     {
-        UIDocument uiDocument = GetComponent<UIDocument>();
-        m_Healthbar = uiDocument.rootVisualElement.Q<VisualElement>("HealthBar");
-        SetHealthValue(1.0f);
+        if (m_TimerDisplay > 0)
+        {
+            m_TimerDisplay -= Time.deltaTime;
+            if (m_TimerDisplay < 0)
+            {
+                m_NonPlayerDialogue.style.display = DisplayStyle.None;
+            }
+
+
+        }
     }
 
 
@@ -32,4 +56,11 @@ public class UIHandler : MonoBehaviour
     }
 
 
+    public void DisplayDialogue()
+    {
+        m_NonPlayerDialogue.style.display = DisplayStyle.Flex;
+        m_TimerDisplay = displayTime;
+    }
+
 }
+
