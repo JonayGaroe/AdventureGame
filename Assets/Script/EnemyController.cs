@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using TMPro;
 public class EnemyController : MonoBehaviour
 {
 
     // bool para los enemigos
     bool broken = true;
-
 
     // ANIMATOR
     Animator animator;
@@ -24,7 +23,8 @@ public class EnemyController : MonoBehaviour
     Rigidbody2D rigidbody2d;
     float timer;
     int direction = 1;
-
+    [SerializeField]
+    TextMeshProUGUI enemieFix;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,8 @@ public class EnemyController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         timer = changeTime;
+        EnemiesContainers.instance.AddEnemie();
+
     }
 
 
@@ -87,9 +89,15 @@ public class EnemyController : MonoBehaviour
 
     public void Fix()
     {
+
         broken = false;
         rigidbody2d.simulated = false;
         animator.SetTrigger("Fixed");
+        EnemiesContainers.instance.RemoveEnemie();
+
+        // EnemiesContainers.AddEnemie();
+        //  EnemiesContainers.RemoveEnemie();
+
 
         if (smokeEffect != null)
         {

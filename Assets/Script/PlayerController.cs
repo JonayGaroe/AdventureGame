@@ -92,6 +92,10 @@ public class PlayerController : MonoBehaviour
         {
             FindFriend();
         }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            FindFriend2();
+        }
     }
 
 
@@ -141,6 +145,18 @@ public class PlayerController : MonoBehaviour
             if (character != null)
             {
                 UIHandler.instance.DisplayDialogue();
+            }
+        }
+    }
+    void FindFriend2()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, moveDirection, 1.5f, LayerMask.GetMask("NPC"));
+        if (hit.collider != null)
+        {
+            NonPlayerCharacter1 character = hit.collider.GetComponent<NonPlayerCharacter1>();
+            if (character != null)
+            {
+                UIHandler1.instance.DisplayDialogue();
             }
         }
     }
